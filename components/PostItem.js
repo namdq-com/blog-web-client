@@ -29,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1
     }
 }))
+
 export default function PostItem(props) {
     const classes = useStyles();
 
@@ -38,20 +39,29 @@ export default function PostItem(props) {
         <Grid item lg={4} md={6} sm={12}>
             <Card className={classes.root}>
                 <CardContent>
-                    <Typography variant={"h4"} color="default" gutterBottom>
+                    <Typography
+                        variant={"h5"}
+                        gutterBottom>
                         {item.title}
                     </Typography>
-                    <Typography variant="body1" color={"textSecondary"}>
+                    <Typography
+                        variant="body1"
+                        color={"textSecondary"}>
                         {item.description}
                     </Typography>
                 </CardContent>
                 <CardActions className={classes.cardAction}>
-                    <Avatar alt="Remy Sharp" className={classes.small}
-                            src={item.authorAvatar}/>
-                    <Typography color={"textSecondary"} className={classes.cardAuthor}>
+                    <Avatar
+                        alt="Remy Sharp"
+                        className={classes.small}
+                        src={item.authorAvatar}/>
+                    <Typography
+                        color={"textSecondary"}
+                        className={classes.cardAuthor}>
                         {item.authorName}
                     </Typography>
-                    <Typography color={"textSecondary"}>
+                    <Typography
+                        color={"textSecondary"}>
                         {item.createDate}
                     </Typography>
                 </CardActions>

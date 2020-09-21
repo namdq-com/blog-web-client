@@ -16,46 +16,12 @@ const useStyles = makeStyles((theme) => ({
     small: {
         width: theme.spacing(3),
         height: theme.spacing(3),
-    },
+    }
 }))
 
-const posts = [
-    {
-        id: 1,
-        title: "Proxy servers",
-        description: "How do proxy servers work and what are forward and reverse proxies?",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 2,
-        title: "CI and CD",
-        description: "Learn the basics of CI/CD and how to implement that with GitHub Actions.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 3,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 4,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    }
-]
-
-export default function Main() {
+export default function Main(props) {
     const classes = useStyles();
+    const posts = props.posts;
 
     return (
         <Box className={classes.root}>
