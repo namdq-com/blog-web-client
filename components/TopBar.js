@@ -14,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
     },
     blogTitle: {
         flexGrow: 1,
+        paddingTop: theme.spacing(0.4)
     },
     topMenu: {
         listStyleType: "none",
@@ -21,6 +22,9 @@ const useStyles = makeStyles((theme) => ({
     },
     topMenuItem: {
         marginLeft: theme.spacing(2)
+    },
+    logo: {
+        fontSize: theme.spacing(6)
     }
 }));
 
@@ -41,7 +45,12 @@ function renderMenuItem(menu) {
     const classes = useStyles();
 
     return (
-        <Link key={menu.id} href={menu.link} underline={"none"} color={"textPrimary"} className={classes.topMenuItem}>
+        <Link key={menu.id}
+              variant={"subtitle1"}
+              href={menu.link}
+              underline={"none"}
+              color={"textPrimary"}
+              className={classes.topMenuItem}>
             {menu.name}
         </Link>
     )
@@ -61,11 +70,13 @@ export default function TopBar() {
     const classes = useStyles();
 
     return (
-        <AppBar position={"static"} color={"transparent"} className={classes.topBar}>
+        <AppBar position={"static"}
+                color={"transparent"}
+                className={classes.topBar}>
             <Container disableGutters>
                 <Toolbar>
                     <div className={classes.blogTitle}>
-                        <CopyrightIcon fontSize={"large"}/>
+                        <CopyrightIcon className={classes.logo}/>
                     </div>
 
                     {renderMenu(menus)}

@@ -19,10 +19,33 @@ const useStyles = makeStyles((theme) => ({
         verticalAlign: "middle",
         fontWeight: "600",
         marginBottom: "0.5rem",
-        marginRight: theme.spacing(1)
+        marginRight: theme.spacing(0.5)
+    },
+    copyright2: {
+        display: 'inline-block',
+        alignItems: 'center',
+        verticalAlign: "middle",
+        marginBottom: "0.5rem",
+        marginRight: theme.spacing(0.5)
+    },
+    about: {
+        display: 'inline-block',
+        alignItems: 'center',
+        verticalAlign: "middle",
+        marginBottom: "0.5rem",
     },
     page: {
         marginRight: theme.spacing(1)
+    },
+    github: {
+        background: "rgb(30, 153, 230)",
+        borderRadius: theme.spacing(0.5),
+        color: "white",
+        fontSize: theme.spacing(1.5),
+        paddingTop: theme.spacing(0.4),
+        paddingBottom: theme.spacing(0.4),
+        paddingLeft: theme.spacing(0.5),
+        paddingRight: theme.spacing(0.5),
     }
 }))
 
@@ -118,7 +141,15 @@ export default function Footer() {
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             namdq.com
                         </Typography>
-                        <Typography color={"textSecondary"}>
+                        <Typography variant={"subtitle1"} className={classes.copyright2}>
+                            by <Link href={"https://github.com/namdq2"}
+                                     color={"textPrimary"}
+                                     className={classes.github}
+                                     underline={"none"}>
+                            @namdq2
+                        </Link>
+                        </Typography>
+                        <Typography color={"textSecondary"} className={classes.about}>
                             Community created roadmaps, articles, resources and journeys to help you choose your path
                             and grow in your career.
                         </Typography>
@@ -138,7 +169,7 @@ export default function Footer() {
 
                     <Grid item lg={1} md={4} sm={1}/>
 
-                    <Grid item lg={2} md={4} sm={12}>
+                    <Grid item lg={2} md={4}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Resource
                         </Typography>
@@ -146,7 +177,7 @@ export default function Footer() {
                         {renderCategories(resources)}
                     </Grid>
 
-                    <Grid item lg={2} md={4} sm={12}>
+                    <Grid item lg={2} md={4}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Catogories
                         </Typography>
@@ -154,7 +185,7 @@ export default function Footer() {
                         {renderCategories(categories)}
                     </Grid>
 
-                    <Grid item lg={2} md={4} sm={12}>
+                    <Grid item lg={2} md={4}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Most Visited
                         </Typography>

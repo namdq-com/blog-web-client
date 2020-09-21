@@ -8,12 +8,12 @@ import {
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4)
+        paddingTop: theme.spacing(3),
+        paddingBottom: theme.spacing(5)
     },
     title: {
         textAlign: "center",
-        fontSize: "4rem",
+        fontSize: "3rem",
         marginTop: theme.spacing(2),
         marginBottom: theme.spacing(2)
     },
