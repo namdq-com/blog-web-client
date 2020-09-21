@@ -1,11 +1,10 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
-import CopyrightIcon from '@material-ui/icons/Copyright';
 import {
     Toolbar,
     Link,
     Container,
-    AppBar
+    AppBar, Typography, CardContent
 } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -24,7 +23,8 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: theme.spacing(2)
     },
     logo: {
-        fontSize: theme.spacing(6)
+        fontSize: theme.spacing(3),
+        fontWeight: "600"
     }
 }));
 
@@ -76,7 +76,12 @@ export default function TopBar() {
             <Container disableGutters>
                 <Toolbar>
                     <div className={classes.blogTitle}>
-                        <CopyrightIcon className={classes.logo}/>
+                        <Typography
+                            variant="body1"
+                            color={"textPrimary"}
+                            className={classes.logo}>
+                            NAMDQ.
+                        </Typography>
                     </div>
 
                     {renderMenu(menus)}

@@ -136,7 +136,7 @@ export default function Footer() {
         <div className={classes.root}>
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item lg={5} md={8} sm={11}>
+                    <Grid item lg={5} md={8} sm={11} xs={11}>
                         <CopyrightIcon className={classes.copyright}/>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             namdq.com
@@ -167,9 +167,9 @@ export default function Footer() {
                         </Typography>
                     </Grid>
 
-                    <Grid item lg={1} md={4} sm={1}/>
+                    <Grid item lg={1} md={4} sm={1} xs={1}/>
 
-                    <Grid item lg={2} md={4}>
+                    <Grid item lg={2} md={4} sm={4} xs={12}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Resource
                         </Typography>
@@ -177,7 +177,7 @@ export default function Footer() {
                         {renderCategories(resources)}
                     </Grid>
 
-                    <Grid item lg={2} md={4}>
+                    <Grid item lg={2} md={4} sm={4} xs={12}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Catogories
                         </Typography>
@@ -185,7 +185,7 @@ export default function Footer() {
                         {renderCategories(categories)}
                     </Grid>
 
-                    <Grid item lg={2} md={4}>
+                    <Grid item lg={2} md={4} sm={4} xs={12}>
                         <Typography variant={"subtitle1"} className={classes.copyright}>
                             Most Visited
                         </Typography>
