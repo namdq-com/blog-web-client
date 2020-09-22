@@ -2,110 +2,12 @@ import Head from 'next/head'
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import {posts} from "../constants/Posts";
 
 const page = {
     title: "Programming Guides",
     description: "Easy to follow guides on complex topics written and maintained by the community"
 }
-
-const posts = [
-    {
-        id: 1,
-        title: "Proxy servers",
-        description: "How do proxy servers work and what are forward and reverse proxies?",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 2,
-        title: "CI and CD",
-        description: "Learn the basics of CI/CD and how to implement that with GitHub Actions.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 3,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 4,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 5,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 6,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 7,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 8,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 9,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 10,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 11,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    },
-    {
-        id: 12,
-        title: "SSO - Single Sign On",
-        description: "Learn the basics of SAML and anderstand how does Single Sign On work.",
-        authorName: "NamDQ",
-        authorAvatar: "https://material-ui.com/static/images/avatar/1.jpg",
-        createDate: "July 24, 2020"
-    }
-]
 
 export default function Home() {
     return (

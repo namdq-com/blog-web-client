@@ -76,12 +76,14 @@ export default function TopBar() {
             <Container disableGutters>
                 <Toolbar>
                     <div className={classes.blogTitle}>
-                        <Typography
-                            variant="body1"
-                            color={"textPrimary"}
-                            className={classes.logo}>
-                            NAMDQ.
-                        </Typography>
+                        <Link href={"/"} underline={"none"}>
+                            <Typography
+                                variant="body1"
+                                color={"textPrimary"}
+                                className={classes.logo}>
+                                NAMDQ.
+                            </Typography>
+                        </Link>
                     </div>
 
                     {renderMenu(menus)}
