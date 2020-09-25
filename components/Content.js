@@ -1,14 +1,14 @@
 import React from "react";
 import {makeStyles} from "@material-ui/core/styles";
+import ReactMarkdown from "react-markdown"
+
 import {
     Container,
     Box
 } from "@material-ui/core";
-import PostList from "./PostList";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        background: "#fafafa !important",
         borderTop: "1px solid #eaeaea !important",
         paddingTop: theme.spacing(4),
         paddingBottom: theme.spacing(4)
@@ -19,14 +19,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-export default function Main(props) {
+export default function Content(props) {
     const classes = useStyles();
-    const posts = props.posts;
+    const post = props.post;
 
     return (
         <Box className={classes.root}>
-            <Container>
-                <PostList items={posts}/>
+            <Container maxWidth={"md"}>
+                <ReactMarkdown source={post.content}/>
             </Container>
         </Box>
     )

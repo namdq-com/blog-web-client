@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import {posts} from "../constants/Posts";
 
 const page = {
     title: "Programming Guides",
@@ -18,7 +19,7 @@ export default function Home() {
 
             <Header page={page}/>
 
-            <Main/>
+            <Main posts={posts}/>
 
             <Footer/>
         </div>
